@@ -14,7 +14,7 @@
     <!-- <h4>Country</h4> -->
     <mat-form-field appearance="fill">
         <mat-label>Select Country</mat-label>
-        <mat-select placeholder="Country" [(value)]="selectedCountry" [disabled]="!selectedRegion" (selectionChange)="onCountryChange()">
+        <mat-select placeholder="Country" [(value)]="selectedCountry" [disabled]="!selectedRegion">
             <mat-option *ngFor="let country of countries" [value]="country.name">
                 {{country.name}}
               </mat-option>

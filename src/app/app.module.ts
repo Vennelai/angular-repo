@@ -10,9 +10,6 @@ import {MatTableModule} from '@angular/material/table';
 import { AppComponent } from './app.component';
 import { RegionsComponent } from './regions/regions.component';
 import { CountryDetailsComponent } from './country-details/country-details.component';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import {appReducer} from './store/appReducer';
 
 @NgModule({
   declarations: [
@@ -25,9 +22,7 @@ import {appReducer} from './store/appReducer';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    MatTableModule,
-    StoreModule.forRoot(appReducer),
-    EffectsModule.forRoot([])
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
