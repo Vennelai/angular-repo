@@ -1,0 +1,5 @@
+Created angular project using CLI
+Used angular material for components: ng add @angular/material
+Used service to make API calls
+Used SCSS and added some styling
+If I had more time: could have added test cases for all scenarios and use ngrx features like store/action/reducers
