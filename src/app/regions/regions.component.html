@@ -1,0 +1,26 @@
+
+<div style='margin-left: 80px;margin-top: 80px'>
+    <h1>Demographics</h1>
+    <!-- <h4>Region</h4> -->
+    <mat-form-field appearance="fill">
+        <mat-label>Select Region</mat-label>
+        <mat-select placeholder="Region" [(value)]="selectedRegion"  (selectionChange)="onRegionChange()">
+            <mat-option *ngFor="let region of regions" [value]="region.value">
+                {{region.name}}
+              </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div>
+    <!-- <h4>Country</h4> -->
+    <mat-form-field appearance="fill">
+        <mat-label>Select Country</mat-label>
+        <mat-select placeholder="Country" [(value)]="selectedCountry" [disabled]="!selectedRegion" (selectionChange)="onCountryChange()">
+            <mat-option *ngFor="let country of countries" [value]="country.name">
+                {{country.name}}
+              </mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+
+<app-country-details  [countriesData]="countries" *ngIf="selectedCountry" [selCountry] = "selectedCountry"></app-country-details>
+</div>

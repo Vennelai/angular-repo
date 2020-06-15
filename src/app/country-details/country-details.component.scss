@@ -1,0 +1,19 @@
+@mixin column-width{
+    min-width: 100px
+}
+
+.mat-column-flag {
+    @include column-width;
+}
+.mat-column-name {
+   @include column-width;
+}
+.mat-column-capital {
+    @include column-width;
+}
+.mat-column-population {
+    @include column-width;
+}
+.mat-column-currencies {
+    @include column-width;
+}
